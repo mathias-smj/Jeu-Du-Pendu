@@ -18,13 +18,29 @@ const mots =[
     "CSS"
   ];
 
-const tentatives = 5;
+// VARIABLES :
+let motDeviner;
+const motAffiche = [];
+let alphabetBtn = document.querySelectorAll('#alphabet');
 
+// FONCTIONS
 function choisirMotsAleatoire(){
-    let motsRandom = Math.floor(Math.random() * mots.length);
-    return mots[motsRandom];
+
+    const motsAleatoire = Math.floor(Math.random() * mots.length);
+    motInitial = mots[motsAleatoire];
+    motAdeviner = motInitial.split("");
+    return motAdeviner;
 }
-console.log(motsRandom)
+
+function clickBtn(e){
+  const lettre = e.target.textContent;
+  alert("Lettre selectionnée : " + lettre);
+
+}
+
+alphabetBtn.forEach(button => {
+  button.addEventListener('click', clickBtn)
+})
 
 
 
