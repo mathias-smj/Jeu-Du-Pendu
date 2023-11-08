@@ -8,9 +8,17 @@
 </head>
 <body>
     <h1>Le jeu du Pendu</h1>
-    <div id="motAdeviner">
+    
+    <input type="text" id="proposerMot" placeholder="Entrez un mot">
+    <button id="proposerMotBtn">Proposer</button>
+
+    <div id="viesRestantes">
+        Vies restantes : <span id="compteurVies">6</span>
+      </div>      
+    <div id="affichageMot">
         <p>Mot a deviner : </p>
     </div>
+    <br>
     <div id="alphabet">
         <button>A</button>
         <button>B</button>
@@ -39,6 +47,8 @@
         <button>Y</button>
         <button>Z</button>
     </div>
+    <br>
+    <button id="rejouer">Rejouer</button>
     <script src="app.js"></script>
 </body>
 </html>
