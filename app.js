@@ -47,14 +47,17 @@ function mettreAJourMotAffiche(lettre) {
 
   afficherMot();
 
-  if (lettreCorrecte) {
-    verifierResultat();
-  } else {
-    chancesRestantes--;
+  if (!lettreCorrecte) {
+    if (chancesRestantes > 0) {
+      chancesRestantes--;
+    }
     compteurViesElement.textContent = chancesRestantes;
     penduImage.src = `assets/${chancesRestantes}.png`;
   }
-  verifierResultat();
+
+  if (chancesRestantes <= 0 || motADeviner.join('') === motAffiche.join('')) {
+    verifierResultat(); 
+  }
 }
 
 
@@ -83,11 +86,12 @@ function proposerMot() {
   const motProposer = proposerMotInput.value.trim();
   if (motProposer === motADeviner.join('')) {
     alert("Bravo vous avez trouvé le mot secret : " + motProposer);
-    genererNouveauMot();
+    nouvellePartie();
   } else {
     alert("Dommage ce n'est pas le bon mot.")
     chancesRestantes--;
     compteurViesElement.textContent = chancesRestantes;
+    penduImage.src = `assets/${chancesRestantes}.png`;
     verifierResultat();
   }
   proposerMotInput.value = '';
@@ -98,6 +102,7 @@ function nouvellePartie() {
   compteurViesElement.textContent = chancesRestantes;
   restaurerBoutonsAlphabet();
   afficherMot();
+  penduImage.src = 'assets/10.png';
 }
 
 function restaurerBoutonsAlphabet() {
@@ -127,4 +132,5 @@ proposerMotInput.addEventListener('keyup', (event) => {
   }
 });
 
+penduImage.src = 'assets/10.png';
 choisirMotAleatoire();
