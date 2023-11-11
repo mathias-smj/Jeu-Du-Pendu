@@ -7,48 +7,54 @@
     <title>Jeu du Pendu</title>
 </head>
 <body>
-    <h1>Le jeu du Pendu</h1>
-    
+    <div id="container">
+        
     <input type="text" id="proposerMot" placeholder="Entrez un mot">
     <button id="proposerMotBtn">Proposer</button>
 
     <div id="viesRestantes">
-        Vies restantes : <span id="compteurVies">6</span>
-      </div>      
+        Vies restantes : <span id="compteurVies">10</span>
+    </div> 
+
     <div id="affichageMot">
         <p>Mot a deviner : </p>
     </div>
-    <br>
-    <div id="alphabet">
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
-        <button>E</button>
-        <button>F</button>
-        <button>G</button>
-        <button>H</button>
-        <button>I</button>
-        <button>J</button>
-        <button>K</button>
-        <button>L</button>
-        <button>M</button>
-        <button>N</button>
-        <button>O</button>
-        <button>P</button>
-        <button>Q</button>
-        <button>R</button>
-        <button>S</button>
-        <button>T</button>
-        <button>U</button>
-        <button>V</button>
-        <button>W</button>
-        <button>X</button>
-        <button>Y</button>
-        <button>Z</button>
+
+    <div id="pendu-image">
+        <img id="penduImage" src="assets/10.png" alt="pendu" width="250px" height="300px">
     </div>
-    <br>
+
+    <div id="alphabet">
+        <button class="lettreBtn">A</button>
+        <button class="lettreBtn">B</button>
+        <button class="lettreBtn">C</button>
+        <button class="lettreBtn">D</button>
+        <button class="lettreBtn">E</button>
+        <button class="lettreBtn">F</button>
+        <button class="lettreBtn">G</button>
+        <button class="lettreBtn">H</button>
+        <button class="lettreBtn">I</button>
+        <button class="lettreBtn">J</button>
+        <button class="lettreBtn">K</button>
+        <button class="lettreBtn">L</button>
+        <button class="lettreBtn">M</button>
+        <button class="lettreBtn">N</button>
+        <button class="lettreBtn">O</button>
+        <button class="lettreBtn">P</button>
+        <button class="lettreBtn">Q</button>
+        <button class="lettreBtn">R</button>
+        <button class="lettreBtn">S</button>
+        <button class="lettreBtn">T</button>
+        <button class="lettreBtn">U</button>
+        <button class="lettreBtn">V</button>
+        <button class="lettreBtn">W</button>
+        <button class="lettreBtn">X</button>
+        <button class="lettreBtn">Y</button>
+        <button class="lettreBtn">Z</button>
+    </div>
+
     <button id="rejouer">Rejouer</button>
+</div>
     <script src="app.js"></script>
 </body>
 </html>
