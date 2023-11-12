@@ -19,6 +19,7 @@ Chaque lettre incorrecte réduit le nombre de vies.
 Vous pouvez proposer un mot entier à tout moment.
 Le jeu se termine lorsque le mot est deviné ou que toutes les vies sont perdues.
 git 
+
 # Technologies Utilisées
 HTML
 CSS
